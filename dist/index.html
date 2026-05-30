@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lofre is a tiny free offline meditation app with algorithmic frequencies. No ads, accounts, tracking, or streaming."
+    />
+    <meta name="application-name" content="Lofre" />
+    <meta name="apple-mobile-web-app-title" content="Lofre" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#f5f5f4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Lofre - Simple meditation app" />
+    <meta
+      property="og:description"
+      content="A tiny free offline meditation app with algorithmic frequencies. No ads, accounts, tracking, or streaming."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/social-preview.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lofre - Simple meditation app" />
+    <meta
+      name="twitter:description"
+      content="A tiny free offline meditation app with algorithmic frequencies. No ads, accounts, tracking, or streaming."
+    />
+    <meta name="twitter:image" content="/social-preview.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Lofre - Simple meditation app</title>
+    <script type="module" crossorigin src="/assets/index-Dr2I2h1C.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DARqojA_.css">
+  </head>
+  <body>
+    <main class="player-shell">
+      <section class="player-panel" aria-labelledby="app-title">
+        <header class="player-header">
+          <div class="intro">
+            <p class="eyebrow">cryagent's garage</p>
+            <h1 id="app-title">
+              <span class="app-title-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" focusable="false">
+                  <path
+                    d="M18.286 18.286H32A13.714 13.714 0 0 1 18.286 32zM13.714 0H0v18.286A13.714 13.714 0 0 0 13.714 32z"
+                  />
+                </svg>
+              </span>
+              Lofre
+            </h1>
+          </div>
+
+          <div class="header-actions">
+            <button class="more-button" type="button" aria-haspopup="dialog">More</button>
+            <button class="theme-toggle" type="button" aria-pressed="false">Dark</button>
+          </div>
+        </header>
+
+        <div class="track-row">
+          <div class="wave-loader" aria-live="polite" aria-label="Audio paused">
+            <svg
+              class="wave-loader-icon"
+              viewBox="0 0 50 38"
+              role="img"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect class="wave-bar wave-bar-1" x="0" y="15" width="2" height="8" rx="1" />
+              <rect class="wave-bar wave-bar-2" x="6" y="15" width="2" height="8" rx="1" />
+              <rect class="wave-bar wave-bar-3" x="12" y="15" width="2" height="8" rx="1" />
+              <rect class="wave-bar wave-bar-4" x="18" y="15" width="2" height="8" rx="1" />
+              <rect class="wave-bar wave-bar-5" x="24" y="15" width="2" height="8" rx="1" />
+              <rect class="wave-bar wave-bar-6" x="30" y="15" width="2" height="8" rx="1" />
+              <rect class="wave-bar wave-bar-7" x="36" y="15" width="2" height="8" rx="1" />
+              <rect class="wave-bar wave-bar-8" x="42" y="15" width="2" height="8" rx="1" />
+              <rect class="wave-bar wave-bar-9" x="48" y="15" width="2" height="8" rx="1" />
+            </svg>
+          </div>
+
+          <div class="track-dropdown">
+            <button
+              class="track-dropdown-trigger"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+            >
+              <span class="track-dropdown-label">Track</span>
+              <span class="track-dropdown-value" data-track-select-value></span>
+              <span class="track-dropdown-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="track-dropdown-menu" role="listbox" aria-label="Meditation tracks"></div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="play-button" type="button" aria-pressed="false">Play</button>
+          <div class="control-settings">
+            <div class="timer-control" aria-labelledby="timer-label">
+              <button class="timer-trigger" type="button" aria-haspopup="dialog">
+                <output class="timer-status" aria-live="polite">00:00</output>
+              </button>
+            </div>
+            <label class="volume-control">
+              <span>Volume</span>
+              <input type="range" min="0" max="1" step="0.01" value="0.45" />
+            </label>
+          </div>
+        </div>
+
+        <dialog class="timer-modal" aria-labelledby="timer-modal-title">
+          <div class="timer-modal-panel">
+            <div class="timer-modal-header">
+              <h2 id="timer-modal-title">Timer</h2>
+              <div class="timer-modal-actions">
+                <button class="timer-modal-clear" type="button" aria-label="Clear timer">
+                  Clear
+                </button>
+                <button class="timer-modal-close" type="button" aria-label="Close timer settings">
+                  Close
+                </button>
+              </div>
+            </div>
+            <output class="timer-status timer-modal-status" aria-live="polite">00:00</output>
+            <div class="timer-picker" aria-label="Timer duration">
+              <div class="timer-option-group" aria-label="Hours">
+                <button class="timer-option" type="button" data-timer-hour="1">1h</button>
+                <button class="timer-option" type="button" data-timer-hour="2">2h</button>
+                <button class="timer-option" type="button" data-timer-hour="3">3h</button>
+                <button class="timer-option" type="button" data-timer-hour="4">4h</button>
+                <button class="timer-option" type="button" data-timer-hour="5">5h</button>
+                <button class="timer-option" type="button" data-timer-hour="6">6h</button>
+              </div>
+              <div class="timer-option-group" aria-label="Minutes">
+                <button class="timer-option" type="button" data-timer-minute="0">0m</button>
+                <button class="timer-option" type="button" data-timer-minute="15">15m</button>
+                <button class="timer-option" type="button" data-timer-minute="30">30m</button>
+                <button class="timer-option" type="button" data-timer-minute="45">45m</button>
+              </div>
+            </div>
+          </div>
+        </dialog>
+
+        <dialog class="project-modal" aria-labelledby="project-modal-title">
+          <div class="project-modal-panel">
+            <div class="project-modal-header">
+              <div>
+                <p class="eyebrow">About</p>
+                <h2 id="project-modal-title">Lofre</h2>
+              </div>
+              <button class="project-modal-close" type="button" aria-label="Close project info">
+                Close
+              </button>
+            </div>
+            <p class="project-modal-copy">
+              No selling. No ads. No sign-up. No audio streaming. Work offline. Less than 15KB
+            </p>
+            <p class="project-modal-copy">
+              YouTube and Spotify can use gigabytes of data over long sessions. Many meditation apps
+              are bloated with courses, subscriptions, ads, tracking, or streamed audio.
+            </p>
+            <p class="project-modal-copy">
+              This app is built differently: a tiny offline meditation tool powered by a custom
+              6,000+ line
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"
+                target="_blank"
+                rel="noreferrer"
+              >
+                algorithmic audio generator</a
+              >.
+            </p>
+            <p class="project-modal-copy">
+              I built Lofre out of frustration. I couldn't find the perfect meditation app:
+              something straightforward, quiet, lightweight and free from bullshit routine juggling,
+              not like you Endel. I don't believe an app needs to tell you which routine is "the
+              best." Meditation is personal. We build our own routines by ourselves, in our own way.
+              A meditation app should be
+              <u>less distracting</u>
+              , not another place to cross sell users. Lofre is made to stay out of the way,
+              including the ability to play underneath your main device audio with its own volume
+              control, so you can adjust the meditation layer without changing the audio you use for
+              work or even scrolling TikTok.
+            </p>
+            <p class="project-modal-copy">
+              I commit to never taking profit from Lofre. I built it to be so lightweight that even
+              10 million active users would cost me around $5 monthly. That means there is no reason
+              to sell, track, ads, or lock anything behind subscriptions. Share it with anyone. Use
+              it however it helps.
+            </p>
+            <div class="project-modal-actions">
+              <button class="project-modal-action project-modal-share" type="button">Share</button>
+              <a
+                class="project-modal-action"
+                href="https://github.com/cryagent/lofre"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Source Code
+              </a>
+              <button class="project-modal-action project-modal-install" type="button">
+                Works Offline
+              </button>
+            </div>
+          </div>
+        </dialog>
+      </section>
+    </main>
+  </body>
+</html>
