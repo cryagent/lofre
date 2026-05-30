@@ -6,7 +6,7 @@ import {
   createStereoPanner,
   safeDisconnect,
   stopSources,
-} from './shared.js';
+} from "./shared.js";
 
 export function createHarmonicCloud(ctx, destination, track) {
   const output = ctx.createGain();
@@ -19,17 +19,17 @@ export function createHarmonicCloud(ctx, destination, track) {
   const baseFrequency = track.baseFrequency ?? 180;
 
   output.gain.setValueAtTime(0, now);
-  drift.type = 'sine';
+  drift.type = "sine";
   drift.frequency.setValueAtTime(track.driftFrequency ?? 0.008, now);
   driftGain.gain.setValueAtTime(track.driftDepthCents ?? 4, now);
   drift.connect(driftGain);
 
-  (track.partials ?? [{ ratio: 1, type: 'sine', gain: 0.06, pan: 0 }]).forEach((partial) => {
+  (track.partials ?? [{ ratio: 1, type: "sine", gain: 0.06, pan: 0 }]).forEach((partial) => {
     const oscillator = ctx.createOscillator();
     const gain = ctx.createGain();
     const panner = createStereoPanner(ctx, (partial.pan ?? 0) * (track.stereoWidth ?? 1));
 
-    oscillator.type = partial.type ?? 'sine';
+    oscillator.type = partial.type ?? "sine";
     oscillator.frequency.setValueAtTime(baseFrequency * partial.ratio, now);
     oscillator.detune.setValueAtTime(partial.detuneCents ?? 0, now);
     gain.gain.setValueAtTime(partial.gain ?? 0.02, now);
@@ -43,11 +43,11 @@ export function createHarmonicCloud(ctx, destination, track) {
   });
 
   if (track.shimmerLevel) {
-    const shimmer = createLoopingNoise(ctx, 'white', 3);
+    const shimmer = createLoopingNoise(ctx, "white", 3);
     const shimmerFilter = ctx.createBiquadFilter();
     const shimmerGain = ctx.createGain();
 
-    shimmerFilter.type = 'bandpass';
+    shimmerFilter.type = "bandpass";
     shimmerFilter.frequency.setValueAtTime(track.shimmerBandHz ?? 2200, now);
     shimmerFilter.Q.setValueAtTime(0.8, now);
     shimmerGain.gain.setValueAtTime(track.shimmerLevel, now);

@@ -1,6 +1,6 @@
 export const DEFAULT_FADE_SECONDS = 1.2;
 
-export function createNoiseBuffer(ctx, seconds = 2, color = 'white') {
+export function createNoiseBuffer(ctx, seconds = 2, color = "white") {
   const frameCount = Math.max(1, Math.floor(ctx.sampleRate * seconds));
   const buffer = ctx.createBuffer(1, frameCount, ctx.sampleRate);
   const output = buffer.getChannelData(0);
@@ -16,7 +16,7 @@ export function createNoiseBuffer(ctx, seconds = 2, color = 'white') {
   for (let index = 0; index < output.length; index += 1) {
     const white = Math.random() * 2 - 1;
 
-    if (color === 'pink') {
+    if (color === "pink") {
       b0 = 0.99886 * b0 + white * 0.0555179;
       b1 = 0.99332 * b1 + white * 0.0750759;
       b2 = 0.969 * b2 + white * 0.153852;
@@ -28,7 +28,7 @@ export function createNoiseBuffer(ctx, seconds = 2, color = 'white') {
       continue;
     }
 
-    if (color === 'brown') {
+    if (color === "brown") {
       brown = (brown + 0.02 * white) / 1.02;
       output[index] = brown * 3.5;
       continue;
@@ -40,7 +40,7 @@ export function createNoiseBuffer(ctx, seconds = 2, color = 'white') {
   return buffer;
 }
 
-export function createLoopingNoise(ctx, color = 'white', seconds = 2) {
+export function createLoopingNoise(ctx, color = "white", seconds = 2) {
   const source = ctx.createBufferSource();
   source.buffer = createNoiseBuffer(ctx, seconds, color);
   source.loop = true;
@@ -111,14 +111,14 @@ export function createStereoPanner(ctx, pan = 0) {
 
 export function createLowpass(ctx, frequency = 1200) {
   const filter = ctx.createBiquadFilter();
-  filter.type = 'lowpass';
+  filter.type = "lowpass";
   filter.frequency.setValueAtTime(frequency, ctx.currentTime);
   return filter;
 }
 
 export function createHighpass(ctx, frequency = 40) {
   const filter = ctx.createBiquadFilter();
-  filter.type = 'highpass';
+  filter.type = "highpass";
   filter.frequency.setValueAtTime(frequency, ctx.currentTime);
   return filter;
 }

@@ -4,13 +4,13 @@ import {
   createLoopingNoise,
   safeDisconnect,
   stopSources,
-} from './shared.js';
+} from "./shared.js";
 
 export function createLayeredDrone(ctx, destination, track) {
   const output = ctx.createGain();
   const drift = ctx.createOscillator();
   const driftGain = ctx.createGain();
-  const shimmer = createLoopingNoise(ctx, 'white', 2);
+  const shimmer = createLoopingNoise(ctx, "white", 2);
   const shimmerFilter = ctx.createBiquadFilter();
   const shimmerGain = ctx.createGain();
   const sources = [drift, shimmer];
@@ -18,7 +18,7 @@ export function createLayeredDrone(ctx, destination, track) {
   const now = ctx.currentTime;
 
   output.gain.setValueAtTime(0, now);
-  drift.type = 'sine';
+  drift.type = "sine";
   drift.frequency.setValueAtTime(track.driftFrequency ?? 0.01, now);
   driftGain.gain.setValueAtTime((track.baseFrequency ?? 160) * 0.012, now);
   drift.connect(driftGain);
@@ -27,7 +27,7 @@ export function createLayeredDrone(ctx, destination, track) {
     const oscillator = ctx.createOscillator();
     const gain = ctx.createGain();
 
-    oscillator.type = index === 0 ? 'sine' : 'triangle';
+    oscillator.type = index === 0 ? "sine" : "triangle";
     oscillator.frequency.setValueAtTime((track.baseFrequency ?? 160) * ratio, now);
     gain.gain.setValueAtTime(0.15 / (index + 1), now);
     driftGain.connect(oscillator.detune);
@@ -38,7 +38,7 @@ export function createLayeredDrone(ctx, destination, track) {
     nodes.push(oscillator, gain);
   });
 
-  shimmerFilter.type = 'bandpass';
+  shimmerFilter.type = "bandpass";
   shimmerFilter.frequency.setValueAtTime((track.baseFrequency ?? 160) * 6, now);
   shimmerFilter.Q.setValueAtTime(0.75, now);
   shimmerGain.gain.setValueAtTime(track.shimmerLevel ?? 0.006, now);

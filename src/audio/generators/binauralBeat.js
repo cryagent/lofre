@@ -5,7 +5,7 @@ import {
   createLowpass,
   safeDisconnect,
   stopSources,
-} from './shared.js';
+} from "./shared.js";
 
 export function createBinauralBeat(ctx, destination, track) {
   const output = ctx.createGain();
@@ -22,8 +22,8 @@ export function createBinauralBeat(ctx, destination, track) {
   const rampSeconds = track.rampSeconds ?? 4;
 
   output.gain.setValueAtTime(0, now);
-  left.type = 'sine';
-  right.type = 'sine';
+  left.type = "sine";
+  right.type = "sine";
   left.frequency.setValueAtTime(carrier - beat / 2, now);
   right.frequency.setValueAtTime(carrier + beat / 2, now);
   leftGain.gain.setValueAtTime(0.0001, now);
@@ -38,7 +38,7 @@ export function createBinauralBeat(ctx, destination, track) {
   merger.connect(output);
 
   if (track.noiseLevel) {
-    const noise = createLoopingNoise(ctx, track.noiseColor ?? 'pink', 3);
+    const noise = createLoopingNoise(ctx, track.noiseColor ?? "pink", 3);
     const filter = createLowpass(ctx, track.lowpassHz ?? 1600);
     const noiseGain = ctx.createGain();
 

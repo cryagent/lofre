@@ -5,7 +5,7 @@ import {
   createLowpass,
   safeDisconnect,
   stopSources,
-} from './shared.js';
+} from "./shared.js";
 
 export function createPulseTone(ctx, destination, track) {
   const output = ctx.createGain();
@@ -13,15 +13,15 @@ export function createPulseTone(ctx, destination, track) {
   const pulse = ctx.createOscillator();
   const pulseGain = ctx.createGain();
   const toneGain = ctx.createGain();
-  const noise = createLoopingNoise(ctx, 'white', 2);
+  const noise = createLoopingNoise(ctx, "white", 2);
   const noiseFilter = createLowpass(ctx, 1200);
   const noiseGain = ctx.createGain();
   const now = ctx.currentTime;
 
   output.gain.setValueAtTime(0, now);
-  oscillator.type = 'sine';
+  oscillator.type = "sine";
   oscillator.frequency.setValueAtTime(track.baseFrequency, now);
-  pulse.type = 'sine';
+  pulse.type = "sine";
   pulse.frequency.setValueAtTime(track.pulseFrequency, now);
   pulseGain.gain.setValueAtTime(0.22, now);
   toneGain.gain.setValueAtTime(0.34, now);

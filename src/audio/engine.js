@@ -1,5 +1,5 @@
-import { generators } from './generators/index.js';
-import { createMasterChain, safeDisconnect } from './generators/shared.js';
+import { generators } from "./generators/index.js";
+import { createMasterChain, safeDisconnect } from "./generators/shared.js";
 
 const FADE_SECONDS = 1.2;
 
@@ -21,7 +21,7 @@ export function createAudioEngine() {
   async function ensureRunning() {
     const ctx = getAudioContext();
 
-    if (ctx.state === 'suspended') {
+    if (ctx.state === "suspended") {
       await ctx.resume();
     }
 
@@ -38,7 +38,7 @@ export function createAudioEngine() {
 
   async function playTrack(track) {
     const ctx = await ensureRunning();
-    const createGenerator = generators[track.generator] ?? generators['pulse-tone'];
+    const createGenerator = generators[track.generator] ?? generators["pulse-tone"];
     const previousHandle = currentHandle;
 
     if (previousHandle) {

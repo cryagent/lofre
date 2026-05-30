@@ -6,7 +6,7 @@ import {
   createStereoPanner,
   safeDisconnect,
   stopSources,
-} from './shared.js';
+} from "./shared.js";
 
 function scheduleBreath(ctx, gain, track, startAt) {
   const breathRateHz = track.breathRateHz ?? 0.09;
@@ -33,7 +33,7 @@ export function createBreathPulseToneV2(ctx, destination, track) {
   const tone = ctx.createOscillator();
   const toneGain = ctx.createGain();
   const tonePanner = createStereoPanner(ctx, -(track.stereoWidth ?? 0.2));
-  const noise = createLoopingNoise(ctx, track.noiseColor ?? 'brown', 3);
+  const noise = createLoopingNoise(ctx, track.noiseColor ?? "brown", 3);
   const noiseFilter = createLowpass(ctx, track.lowpassHz ?? 900);
   const noiseGain = ctx.createGain();
   const noisePanner = createStereoPanner(ctx, track.stereoWidth ?? 0.2);
@@ -41,7 +41,7 @@ export function createBreathPulseToneV2(ctx, destination, track) {
   let schedulerId = null;
 
   output.gain.setValueAtTime(0, now);
-  tone.type = 'sine';
+  tone.type = "sine";
   tone.frequency.setValueAtTime(track.baseFrequency ?? 110, now);
   noiseGain.gain.setValueAtTime(track.noiseLevel ?? 0.03, now);
 

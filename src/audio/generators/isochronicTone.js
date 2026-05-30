@@ -5,7 +5,7 @@ import {
   createLowpass,
   safeDisconnect,
   stopSources,
-} from './shared.js';
+} from "./shared.js";
 
 function schedulePulses(ctx, gain, track, startAt) {
   const beatFrequency = track.beatFrequency ?? 16;
@@ -38,7 +38,7 @@ export function createIsochronicTone(ctx, destination, track) {
   let schedulerId = null;
 
   output.gain.setValueAtTime(0, now);
-  tone.type = 'sine';
+  tone.type = "sine";
   tone.frequency.setValueAtTime(track.baseFrequency ?? 200, now);
   schedulePulses(ctx, toneGain, track, now);
   schedulerId = window.setInterval(() => {
@@ -49,7 +49,7 @@ export function createIsochronicTone(ctx, destination, track) {
   toneGain.connect(output);
 
   if (track.noiseLevel) {
-    const noise = createLoopingNoise(ctx, 'pink', 3);
+    const noise = createLoopingNoise(ctx, "pink", 3);
     const filter = createLowpass(ctx, track.lowpassHz ?? 2200);
     const noiseGain = ctx.createGain();
 

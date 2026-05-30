@@ -1,4 +1,4 @@
-import { applyFadeIn, applyFadeOut, safeDisconnect, stopSources } from './shared.js';
+import { applyFadeIn, applyFadeOut, safeDisconnect, stopSources } from "./shared.js";
 
 function createAmbientChimesBuffer(ctx, track) {
   const durationSeconds = 18;
@@ -48,7 +48,7 @@ export function createAmbientChimes(ctx, destination, track) {
   output.gain.setValueAtTime(0, now);
   chimes.buffer = createAmbientChimesBuffer(ctx, track);
   chimes.loop = true;
-  chimeFilter.type = 'lowpass';
+  chimeFilter.type = "lowpass";
   chimeFilter.frequency.setValueAtTime(1800, now);
   chimeFilter.Q.setValueAtTime(0.6, now);
   chimeGain.gain.setValueAtTime(0.8, now);

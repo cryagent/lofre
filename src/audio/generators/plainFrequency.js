@@ -1,4 +1,4 @@
-import { applyFadeIn, applyFadeOut, safeDisconnect, stopSources } from './shared.js';
+import { applyFadeIn, applyFadeOut, safeDisconnect, stopSources } from "./shared.js";
 
 export function createPlainFrequency(ctx, destination, track) {
   const output = ctx.createGain();
@@ -7,7 +7,7 @@ export function createPlainFrequency(ctx, destination, track) {
   const now = ctx.currentTime;
 
   output.gain.setValueAtTime(0, now);
-  oscillator.type = track.waveform ?? 'sine';
+  oscillator.type = track.waveform ?? "sine";
   oscillator.frequency.setValueAtTime(track.frequency, now);
   toneGain.gain.setValueAtTime(track.toneLevel ?? 0.06, now);
 

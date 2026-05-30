@@ -7,7 +7,7 @@ import {
   createStereoPanner,
   safeDisconnect,
   stopSources,
-} from './shared.js';
+} from "./shared.js";
 
 function createDropletBuffer(ctx, track) {
   const durationSeconds = 6;
@@ -39,7 +39,7 @@ function addModulation(ctx, targetParam, frequency, depth, sources, nodes) {
   const oscillator = ctx.createOscillator();
   const gain = ctx.createGain();
 
-  oscillator.type = 'sine';
+  oscillator.type = "sine";
   oscillator.frequency.setValueAtTime(frequency, ctx.currentTime);
   gain.gain.setValueAtTime(depth, ctx.currentTime);
   oscillator.connect(gain);
@@ -56,14 +56,14 @@ export function createNatureNoise(ctx, destination, track) {
   const sources = [];
   const nodes = [output, gain, panner];
   const now = ctx.currentTime;
-  const scene = track.scene ?? 'ocean';
+  const scene = track.scene ?? "ocean";
   const intensity = track.intensity ?? 0.4;
 
   output.gain.setValueAtTime(0, now);
   gain.gain.setValueAtTime(track.airLevel ?? 0.04, now);
 
-  if (scene === 'rain') {
-    const air = createLoopingNoise(ctx, 'pink', 3);
+  if (scene === "rain") {
+    const air = createLoopingNoise(ctx, "pink", 3);
     const droplets = ctx.createBufferSource();
     const highpass = createHighpass(ctx, track.highpassHz ?? 120);
     const lowpass = createLowpass(ctx, track.lowpassHz ?? 2400);
@@ -82,7 +82,7 @@ export function createNatureNoise(ctx, destination, track) {
     sources.push(air, droplets);
     nodes.push(air, droplets, highpass, lowpass, dropletGain);
   } else {
-    const color = scene === 'ocean' ? 'brown' : 'pink';
+    const color = scene === "ocean" ? "brown" : "pink";
     const noise = createLoopingNoise(ctx, color, 4);
     const highpass = createHighpass(ctx, track.highpassHz ?? 40);
     const lowpass = createLowpass(ctx, track.lowpassHz ?? 1000);
@@ -94,16 +94,16 @@ export function createNatureNoise(ctx, destination, track) {
     sources.push(noise);
     nodes.push(noise, highpass, lowpass);
 
-    if (scene === 'ocean') {
+    if (scene === "ocean") {
       addModulation(ctx, gain.gain, track.waveRateHz ?? 0.06, intensity * 0.025, sources, nodes);
     }
 
-    if (scene === 'wind') {
+    if (scene === "wind") {
       addModulation(ctx, gain.gain, track.gustRateHz ?? 0.04, intensity * 0.035, sources, nodes);
       addModulation(ctx, lowpass.frequency, track.gustRateHz ?? 0.04, 220, sources, nodes);
     }
 
-    if (scene === 'forest') {
+    if (scene === "forest") {
       const blips = ctx.createBufferSource();
       const blipGain = ctx.createGain();
 

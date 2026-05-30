@@ -7,11 +7,11 @@ import {
   createStereoPanner,
   safeDisconnect,
   stopSources,
-} from './shared.js';
+} from "./shared.js";
 
 export function createColoredNoiseBed(ctx, destination, track) {
   const output = ctx.createGain();
-  const noise = createLoopingNoise(ctx, track.noiseColor ?? 'pink', 4);
+  const noise = createLoopingNoise(ctx, track.noiseColor ?? "pink", 4);
   const highpass = createHighpass(ctx, track.highpassHz ?? 60);
   const lowpass = createLowpass(ctx, track.lowpassHz ?? 2200);
   const gain = ctx.createGain();
@@ -27,7 +27,7 @@ export function createColoredNoiseBed(ctx, destination, track) {
     const modOscillator = ctx.createOscillator();
     const modGain = ctx.createGain();
 
-    modOscillator.type = 'sine';
+    modOscillator.type = "sine";
     modOscillator.frequency.setValueAtTime(track.modulationFrequency, now);
     modGain.gain.setValueAtTime((track.noiseLevel ?? 0.04) * track.modulationDepth, now);
     modOscillator.connect(modGain);
@@ -41,7 +41,7 @@ export function createColoredNoiseBed(ctx, destination, track) {
     const drift = ctx.createOscillator();
     const driftGain = ctx.createGain();
 
-    drift.type = 'sine';
+    drift.type = "sine";
     drift.frequency.setValueAtTime(track.filterDriftHz, now);
     driftGain.gain.setValueAtTime((track.lowpassHz ?? 2200) * 0.08, now);
     drift.connect(driftGain);

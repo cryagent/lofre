@@ -6,11 +6,11 @@ import {
   createStereoPanner,
   safeDisconnect,
   stopSources,
-} from './shared.js';
+} from "./shared.js";
 
 export function createSleepSlowWave(ctx, destination, track) {
   const output = ctx.createGain();
-  const noise = createLoopingNoise(ctx, track.noiseColor ?? 'brown', 5);
+  const noise = createLoopingNoise(ctx, track.noiseColor ?? "brown", 5);
   const lowpass = createLowpass(ctx, track.lowpassHz ?? 700);
   const gain = ctx.createGain();
   const panner = createStereoPanner(ctx, track.stereoWidth ?? 0);
@@ -25,7 +25,7 @@ export function createSleepSlowWave(ctx, destination, track) {
     const pulse = ctx.createOscillator();
     const pulseGain = ctx.createGain();
 
-    pulse.type = 'sine';
+    pulse.type = "sine";
     pulse.frequency.setValueAtTime(track.slowPulseHz, now);
     pulseGain.gain.setValueAtTime((track.noiseLevel ?? 0.05) * track.pulseDepth, now);
     pulse.connect(pulseGain);
@@ -44,7 +44,7 @@ export function createSleepSlowWave(ctx, destination, track) {
     const tone = ctx.createOscillator();
     const toneGain = ctx.createGain();
 
-    tone.type = 'sine';
+    tone.type = "sine";
     tone.frequency.setValueAtTime(track.baseFrequency ?? 96, now);
     toneGain.gain.setValueAtTime(track.toneLevel, now);
     tone.connect(toneGain);
