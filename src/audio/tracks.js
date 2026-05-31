@@ -2,17 +2,19 @@ export const tracks = [
   {
     id: "solfeggio-852hz",
     name: "Solfeggio 852Hz",
-    description: "High intensity wave to immediately reset your brain from almost everything",
+    description:
+      "High intensity wave to immediately reset your brain from almost everything",
     category: "solfeggio",
     popular: true,
     generator: "plain-frequency",
     frequency: 852,
-    toneLevel: 0.035,
+    toneLevel: 0.5,
   },
   {
     id: "arousal-decrease",
     name: "Arousal Decrease",
-    description: "Low complexity wave for stepping down from sexual overstimulation",
+    description:
+      "Low complexity wave for stepping down from sexual overstimulation",
     category: "downshift",
     popular: true,
     generator: "breath-pulse-tone-v2",
@@ -47,7 +49,8 @@ export const tracks = [
   {
     id: "stress-release",
     name: "Stress Release",
-    description: "Slow movement wave for decompression after demanding work or social load",
+    description:
+      "Slow movement wave for decompression after demanding work or social load",
     category: "relaxation",
     popular: true,
     generator: "nature-noise",
@@ -79,7 +82,8 @@ export const tracks = [
   {
     id: "deep-work",
     name: "Deep Work",
-    description: "Very slow motion for long coding, writing, or thinking sessions",
+    description:
+      "Very slow motion for long coding, writing, or thinking sessions",
     category: "focus",
     popular: true,
     generator: "harmonic-cloud",
@@ -99,7 +103,8 @@ export const tracks = [
   {
     id: "productivity-increase",
     name: "Get Out From Procrastionation",
-    description: "Clean light movement for task initiation and steady execution",
+    description:
+      "Clean light movement for task initiation and steady execution",
     category: "focus",
     generator: "harmonic-cloud",
     baseFrequency: 185,
@@ -134,7 +139,8 @@ export const tracks = [
   {
     id: "exam-prep",
     name: "Exam Prep",
-    description: "Balanced attention mask for reading, memorization, and practice problems.",
+    description:
+      "Balanced attention mask for reading, memorization, and practice problems.",
     category: "study",
     generator: "colored-noise-bed",
     noiseColor: "pink",
@@ -201,7 +207,8 @@ export const tracks = [
   {
     id: "low-stress-work",
     name: "Low Stress Work",
-    description: "Soft warm drone for emails, planning, admin, and easy productive flow.",
+    description:
+      "Soft warm drone for emails, planning, admin, and easy productive flow.",
     category: "easeful-work",
     generator: "harmonic-cloud",
     baseFrequency: 146.83,
@@ -263,7 +270,8 @@ export const tracks = [
   {
     id: "post-meeting-reset",
     name: "Post Meeting Reset",
-    description: "Short breath-guided downshift after calls, meetings, or context switching.",
+    description:
+      "Short breath-guided downshift after calls, meetings, or context switching.",
     category: "reset",
     generator: "breath-pulse-tone-v2",
     baseFrequency: 128,
@@ -279,7 +287,8 @@ export const tracks = [
   {
     id: "relax-breath",
     name: "Relax Breath",
-    description: "Slow exhale-weighted pulse for unwinding, calm sitting, and evening transition.",
+    description:
+      "Slow exhale-weighted pulse for unwinding, calm sitting, and evening transition.",
     category: "relaxation",
     generator: "breath-pulse-tone-v2",
     baseFrequency: 110,
@@ -295,7 +304,8 @@ export const tracks = [
   {
     id: "soft-rain-calm",
     name: "Soft Rain Calm",
-    description: "Procedural low-density rain texture for relaxed background listening.",
+    description:
+      "Procedural low-density rain texture for relaxed background listening.",
     category: "relaxation",
     popular: true,
     generator: "nature-noise",
@@ -310,7 +320,8 @@ export const tracks = [
   {
     id: "meditation-grounding",
     name: "Meditation Grounding",
-    description: "Simple body-centered pulse for breath awareness and grounding practice.",
+    description:
+      "Simple body-centered pulse for breath awareness and grounding practice.",
     category: "meditation",
     popular: true,
     generator: "breath-pulse-tone-v2",
@@ -327,7 +338,8 @@ export const tracks = [
   {
     id: "open-awareness",
     name: "Open Awareness",
-    description: "Spacious light drone for meditation where sound stays present but not dominant.",
+    description:
+      "Spacious light drone for meditation where sound stays present but not dominant.",
     category: "meditation",
     generator: "harmonic-cloud",
     baseFrequency: 123.47,
@@ -350,16 +362,17 @@ export const tracks = [
     category: "solfeggio",
     generator: "plain-frequency",
     frequency: 396,
-    toneLevel: 0.045,
+    toneLevel: 0.45,
   },
   {
     id: "solfeggio-417hz",
     name: "Solfeggio 417Hz",
-    description: "Plain 417 Hz sine tone for facilitating change and undoing situations.",
+    description:
+      "Plain 417 Hz sine tone for facilitating change and undoing situations.",
     category: "solfeggio",
     generator: "plain-frequency",
     frequency: 417,
-    toneLevel: 0.045,
+    toneLevel: 0.45,
   },
   {
     id: "solfeggio-528hz",
@@ -373,20 +386,22 @@ export const tracks = [
   {
     id: "solfeggio-639hz",
     name: "Solfeggio 639Hz",
-    description: "Plain 639 Hz sine tone for connecting relationships and community.",
+    description:
+      "Plain 639 Hz sine tone for connecting relationships and community.",
     category: "solfeggio",
     generator: "plain-frequency",
     frequency: 639,
-    toneLevel: 0.04,
+    toneLevel: 0.4,
   },
   {
     id: "solfeggio-741hz",
     name: "Solfeggio 741Hz",
-    description: "Plain 741 Hz sine tone for awakening intuition and self-expression.",
+    description:
+      "Plain 741 Hz sine tone for awakening intuition and self-expression.",
     category: "solfeggio",
     generator: "plain-frequency",
     frequency: 741,
-    toneLevel: 0.038,
+    toneLevel: 0.38,
   },
   {
     id: "nap-prep",
@@ -407,7 +422,8 @@ export const tracks = [
   {
     id: "sleep-drift",
     name: "Sleep Drift",
-    description: "Dark low-passed brown noise with subtle slow movement for sleep onset.",
+    description:
+      "Dark low-passed brown noise with subtle slow movement for sleep onset.",
     category: "sleep",
     popular: true,
     generator: "sleep-slow-wave",
@@ -423,7 +439,8 @@ export const tracks = [
   {
     id: "sleep-continuous",
     name: "Sleep Continuous",
-    description: "Very dark brown noise for longer sleep masking with no chimes or sudden events.",
+    description:
+      "Very dark brown noise for longer sleep masking with no chimes or sudden events.",
     category: "sleep",
     generator: "colored-noise-bed",
     noiseColor: "brown",
@@ -438,7 +455,8 @@ export const tracks = [
   {
     id: "alpha-focus-experimental",
     name: "Alpha Focus Experimental",
-    description: "Headphone-only alpha binaural beat for optional focus experimentation.",
+    description:
+      "Headphone-only alpha binaural beat for optional focus experimentation.",
     category: "experimental",
     generator: "binaural-beat",
     carrierFrequency: 200,
@@ -453,7 +471,8 @@ export const tracks = [
   {
     id: "theta-wind-down-experimental",
     name: "Theta Wind Down Experimental",
-    description: "Headphone-only low-level theta binaural beat for evening relaxation experiments.",
+    description:
+      "Headphone-only low-level theta binaural beat for evening relaxation experiments.",
     category: "experimental",
     generator: "binaural-beat",
     carrierFrequency: 180,
@@ -468,7 +487,8 @@ export const tracks = [
   {
     id: "gamma-focus-experimental",
     name: "Gamma Focus Experimental",
-    description: "Low-level 40 Hz isochronic-style pulse for short optional focus experiments.",
+    description:
+      "Low-level 40 Hz isochronic-style pulse for short optional focus experiments.",
     category: "experimental",
     generator: "isochronic-tone",
     baseFrequency: 200,
