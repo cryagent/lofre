@@ -123,8 +123,7 @@ export const tracks = [
   {
     id: "gaming-focus",
     name: "Gaming Focus",
-    description:
-      "Low-level rhythmic focus tone designed to support alertness without overwhelming game audio.",
+    description: "Very ow level rhythmic tone to support alertness",
     category: "focus",
     generator: "isochronic-tone",
     baseFrequency: 200,
@@ -135,22 +134,6 @@ export const tracks = [
     clickSmoothingMs: 24,
     noiseLevel: 0.014,
     lowpassHz: 2200,
-  },
-  {
-    id: "exam-prep",
-    name: "Exam Prep",
-    description:
-      "Balanced attention mask for reading, memorization, and practice problems.",
-    category: "study",
-    generator: "colored-noise-bed",
-    noiseColor: "pink",
-    noiseLevel: 0.042,
-    lowpassHz: 3200,
-    highpassHz: 70,
-    modulationFrequency: 0.008,
-    modulationDepth: 0.05,
-    stereoWidth: 0.28,
-    filterDriftHz: 0.003,
   },
   {
     id: "nervous-system-settle",
@@ -169,9 +152,8 @@ export const tracks = [
   },
   {
     id: "study-retention",
-    name: "Study Retention",
-    description:
-      "Gentle harmonic stability for longer study blocks without strong rhythmic distraction.",
+    name: "Study Track",
+    description: "Low harmonic stability for longer study blocks",
     category: "study",
     generator: "harmonic-cloud",
     baseFrequency: 174,
@@ -192,7 +174,7 @@ export const tracks = [
     id: "attention-mask",
     name: "Attention Mask",
     description:
-      "Moderate filtered pink noise for masking office, traffic, cafe, or household distractions.",
+      "Moderate filtered noise for masking office, traffic, cafe, or household distractions",
     category: "focus",
     generator: "colored-noise-bed",
     noiseColor: "pink",
@@ -207,8 +189,7 @@ export const tracks = [
   {
     id: "low-stress-work",
     name: "Low Stress Work",
-    description:
-      "Soft warm drone for emails, planning, admin, and easy productive flow.",
+    description: "Soft warm noise for easy productive flow",
     category: "easeful-work",
     generator: "harmonic-cloud",
     baseFrequency: 146.83,
@@ -225,53 +206,9 @@ export const tracks = [
     stereoWidth: 0.28,
   },
   {
-    id: "creative-flow",
-    name: "Creative Flow",
-    description:
-      "Open, slightly brighter harmonic motion for ideation, design, writing, and brainstorming.",
-    category: "creative",
-    generator: "harmonic-cloud",
-    baseFrequency: 220,
-    partials: [
-      { ratio: 1, type: "sine", gain: 0.065, pan: 0 },
-      {
-        ratio: 1.25,
-        type: "triangle",
-        gain: 0.026,
-        detuneCents: 3,
-        pan: -0.22,
-      },
-      { ratio: 1.5, type: "sine", gain: 0.024, detuneCents: -2, pan: 0.2 },
-      { ratio: 2, type: "triangle", gain: 0.014, detuneCents: 2, pan: 0.05 },
-    ],
-    driftFrequency: 0.015,
-    driftDepthCents: 7,
-    shimmerLevel: 0.01,
-    shimmerBandHz: 2800,
-    filterCutoffHz: 2600,
-    stereoWidth: 0.4,
-  },
-  {
-    id: "reading-focus",
-    name: "Reading Focus",
-    description:
-      "Smooth low-detail pink noise for reading without melodic or rhythmic distraction.",
-    category: "study",
-    generator: "colored-noise-bed",
-    noiseColor: "pink",
-    noiseLevel: 0.036,
-    lowpassHz: 2600,
-    highpassHz: 80,
-    modulationFrequency: 0.006,
-    modulationDepth: 0.04,
-    stereoWidth: 0.2,
-    filterDriftHz: 0.002,
-  },
-  {
-    id: "post-meeting-reset",
-    name: "Post Meeting Reset",
-    description:
-      "Short breath-guided downshift after calls, meetings, or context switching.",
+    id: "post-work",
+    name: "Post Work",
+    description: "Short downshift noise after tiring work",
     category: "reset",
     generator: "breath-pulse-tone-v2",
     baseFrequency: 128,
@@ -285,27 +222,10 @@ export const tracks = [
     stereoWidth: 0.2,
   },
   {
-    id: "relax-breath",
-    name: "Relax Breath",
-    description:
-      "Slow exhale-weighted pulse for unwinding, calm sitting, and evening transition.",
-    category: "relaxation",
-    generator: "breath-pulse-tone-v2",
-    baseFrequency: 110,
-    breathRateHz: 0.09,
-    inhaleRatio: 0.38,
-    modulationDepth: 0.38,
-    toneLevel: 0.07,
-    noiseLevel: 0.03,
-    noiseColor: "brown",
-    lowpassHz: 900,
-    stereoWidth: 0.3,
-  },
-  {
     id: "soft-rain-calm",
     name: "Soft Rain Calm",
     description:
-      "Procedural low-density rain texture for relaxed background listening.",
+      "Procedural low-density rain texture for relaxed background listening",
     category: "relaxation",
     popular: true,
     generator: "nature-noise",
@@ -318,28 +238,9 @@ export const tracks = [
     stereoWidth: 0.45,
   },
   {
-    id: "meditation-grounding",
-    name: "Meditation Grounding",
-    description:
-      "Simple body-centered pulse for breath awareness and grounding practice.",
-    category: "meditation",
-    popular: true,
-    generator: "breath-pulse-tone-v2",
-    baseFrequency: 136.1,
-    breathRateHz: 0.075,
-    inhaleRatio: 0.4,
-    modulationDepth: 0.3,
-    toneLevel: 0.064,
-    noiseLevel: 0.024,
-    noiseColor: "brown",
-    lowpassHz: 900,
-    stereoWidth: 0.18,
-  },
-  {
     id: "open-awareness",
     name: "Open Awareness",
-    description:
-      "Spacious light drone for meditation where sound stays present but not dominant.",
+    description: "Spacious light noise for increase awareness",
     category: "meditation",
     generator: "harmonic-cloud",
     baseFrequency: 123.47,
@@ -358,7 +259,7 @@ export const tracks = [
   {
     id: "solfeggio-396hz",
     name: "Solfeggio 396Hz",
-    description: "Plain 396 Hz sine tone for liberating guilt and fear.",
+    description: "Plain 396 Hz sine tone from Solfeggio's collection",
     category: "solfeggio",
     generator: "plain-frequency",
     frequency: 396,
@@ -367,8 +268,7 @@ export const tracks = [
   {
     id: "solfeggio-417hz",
     name: "Solfeggio 417Hz",
-    description:
-      "Plain 417 Hz sine tone for facilitating change and undoing situations.",
+    description: "Plain 417 Hz sine tone from Solfeggio's collection",
     category: "solfeggio",
     generator: "plain-frequency",
     frequency: 417,
@@ -377,7 +277,7 @@ export const tracks = [
   {
     id: "solfeggio-528hz",
     name: "Solfeggio 528Hz",
-    description: "Plain 528 Hz sine tone for transformation and DNA repair.",
+    description: "Plain 528 Hz sine tone from Solfeggio's collection",
     category: "solfeggio",
     generator: "plain-frequency",
     frequency: 528,
@@ -386,8 +286,7 @@ export const tracks = [
   {
     id: "solfeggio-639hz",
     name: "Solfeggio 639Hz",
-    description:
-      "Plain 639 Hz sine tone for connecting relationships and community.",
+    description: "Plain 639 Hz sine tone from Solfeggio's collection",
     category: "solfeggio",
     generator: "plain-frequency",
     frequency: 639,
@@ -396,34 +295,16 @@ export const tracks = [
   {
     id: "solfeggio-741hz",
     name: "Solfeggio 741Hz",
-    description:
-      "Plain 741 Hz sine tone for awakening intuition and self-expression.",
+    description: "Plain 741 Hz sine tone from Solfeggio's collection",
     category: "solfeggio",
     generator: "plain-frequency",
     frequency: 741,
     toneLevel: 0.38,
   },
   {
-    id: "nap-prep",
-    name: "Nap Prep",
-    description:
-      "Soft low-passed noise and faint tone for a short daytime rest without bright details.",
-    category: "sleep",
-    generator: "sleep-slow-wave",
-    baseFrequency: 105,
-    toneLevel: 0.02,
-    noiseColor: "brown",
-    noiseLevel: 0.045,
-    slowPulseHz: 0.95,
-    pulseDepth: 0.045,
-    lowpassHz: 750,
-    stereoWidth: 0.18,
-  },
-  {
-    id: "sleep-drift",
-    name: "Sleep Drift",
-    description:
-      "Dark low-passed brown noise with subtle slow movement for sleep onset.",
+    id: "sleep-noise",
+    name: "Sleep Noise",
+    description: "Low brown noise with subtle movement for sleep",
     category: "sleep",
     popular: true,
     generator: "sleep-slow-wave",
@@ -437,26 +318,10 @@ export const tracks = [
     stereoWidth: 0.25,
   },
   {
-    id: "sleep-continuous",
-    name: "Sleep Continuous",
-    description:
-      "Very dark brown noise for longer sleep masking with no chimes or sudden events.",
-    category: "sleep",
-    generator: "colored-noise-bed",
-    noiseColor: "brown",
-    noiseLevel: 0.052,
-    lowpassHz: 620,
-    highpassHz: 30,
-    modulationFrequency: 0.004,
-    modulationDepth: 0.035,
-    stereoWidth: 0.18,
-    filterDriftHz: 0.0015,
-  },
-  {
     id: "alpha-focus-experimental",
     name: "Alpha Focus Experimental",
     description:
-      "Headphone-only alpha binaural beat for optional focus experimentation.",
+      "Headphone only alpha binaural beat for optional focus experimentation",
     category: "experimental",
     generator: "binaural-beat",
     carrierFrequency: 200,
@@ -470,9 +335,9 @@ export const tracks = [
   },
   {
     id: "theta-wind-down-experimental",
-    name: "Theta Wind Down Experimental",
+    name: "Theta Noise Experimental",
     description:
-      "Headphone-only low-level theta binaural beat for evening relaxation experiments.",
+      "Headphone-only low-level theta binaural beat for evening relaxation experiments",
     category: "experimental",
     generator: "binaural-beat",
     carrierFrequency: 180,
@@ -488,7 +353,7 @@ export const tracks = [
     id: "gamma-focus-experimental",
     name: "Gamma Focus Experimental",
     description:
-      "Low-level 40 Hz isochronic-style pulse for short optional focus experiments.",
+      "Low level 40 Hz isochronic-style pulse for short optional focus experiments",
     category: "experimental",
     generator: "isochronic-tone",
     baseFrequency: 200,
