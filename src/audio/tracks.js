@@ -101,8 +101,8 @@ export const tracks = [
     stereoWidth: 0.2,
   },
   {
-    id: "productivity-increase",
-    name: "Get Out From Procrastionation",
+    id: "stop-procrastinating",
+    name: "Stop Procrastionating",
     description:
       "Clean light movement for task initiation and steady execution",
     category: "focus",
